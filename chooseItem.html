@@ -197,10 +197,11 @@
                             ui.draggable.hide();
                         }
                     },
-                    accept: ".items > div > center > img"
+                    accept: function() {
+                        return (".items > div > center > img" && currSpotCount < 7);
                     }
                 });
-
+                
                 $(".items > div").droppable({
                     drop: function(event, ui) {
                         amount = amount - 2;

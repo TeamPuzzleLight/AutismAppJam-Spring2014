@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var amount = 0
+        var numItem = 5
+        var itemID = 1;
+        var currSpotCount = 1;
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <style>
+        #banner {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Comic Sans MS", Times;
+            background: lightblue;
+        }
+        .apple {
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+        }
+        #basket {
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+        }
+        #displayAmount,
+        #basketContent {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Comic Sans MS", Times;
+            background: lightblue;
+        }
+        .basketSpot {
+            position: relative;
+            min-height: 1px;
+            float: left;
+            border-style: solid;
+            border-width: 3px;
+            border-color: black;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 50px;
+            margin: 19px;
+            border-radius: 25px;
+            //background: white;
+
+        }
+        #fixGrid {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            width: 150px;
+            height: 150px;
+            border-spacing: 2px;
+        }
+        #submit {
+            float: right;
+            margin-right: 50px;
+            -moz-box-shadow: inset 0px 1px 0px 0px #f29c93;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #f29c93;
+            box-shadow: inset 0px 1px 0px 0px #f29c93;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+            background: -moz-linear-gradient(center top, #fe1a00 5%, #ce0100 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+            background-color: #fe1a00;
+            -webkit-border-top-left-radius: 26px;
+            -moz-border-radius-topleft: 26px;
+            border-top-left-radius: 26px;
+            -webkit-border-top-right-radius: 26px;
+            -moz-border-radius-topright: 26px;
+            border-top-right-radius: 26px;
+            -webkit-border-bottom-right-radius: 26px;
+            -moz-border-radius-bottomright: 26px;
+            border-bottom-right-radius: 26px;
+            -webkit-border-bottom-left-radius: 26px;
+            -moz-border-radius-bottomleft: 26px;
+            border-bottom-left-radius: 26px;
+            text-indent: 0;
+            border: 1px solid #d83526;
+            display: inline-block;
+            color: #ffffff;
+            font-family: Comic Sans MS;
+            font-size: 25px;
+            font-weight: bold;
+            font-style: normal;
+            height: 80px;
+            line-height: 80px;
+            width: 151px;
+            text-decoration: none;
+            text-align: center;
+            text-shadow: 1px 1px 0px #b23e35;
+        }
+        #message {
+            font-size: 30px;
+            font-family: "Comic Sans MS", Times;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="banner"> <span class="speech-bubble"></span>What do you want to buy?</div>
+        <br>
+        <br>
+        <br>
+
+        <div class="items">
+            <div class="row">
+                <center>
+                    <img id="item1" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item2" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item3" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item4" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item5" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item6" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item7" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                    <img id="item8" class="apple" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+                </center>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div id="droptargets" class="basketClass">
+            <div class="row">
+                <center>
+                    <img id="basket" src=http://content.mycutegraphics.com/graphics/easter/easter-basket.png>
+                    <p id="message"></p>
+                </center>
+                <button type="button" id="submit">Check Out</button>
+            </div>
+        </div>
+        <br>
+        <script>
+            $(function() {
+                $(".apple").draggable({
+                    revert: function() {
+                        if (currSpotCount !== 7) {
+                            return "invalid"
+                        } else {
+                            document.getElementById("message").innerHTML = "Your Basket is Full";
+                            return "invalid"
+                        }
+                    }
+                });
+
+                $(".basketSpot").draggable({
+                    revert: "invalid"
+                });
+
+                $("#basket").droppable({
+                    drop: function(event, ui) {
+                        amount = amount + 2;
+                        document.getElementById("display").innerHTML = amount;
+                        var copy = ui.draggable.html();
+                        if (currSpotCount == 1) {
+                            document.getElementById("box1").src = document.getElementById("item1").src;
+                            currSpotCount++;
+                            ui.draggable.hide();
+                        } else if (currSpotCount == 2) {
+                            document.getElementById("box2").src = document.getElementById("item2").src;
+                            currSpotCount++;
+                            ui.draggable.hide();
+                        } else if (currSpotCount == 3) {
+                            document.getElementById("box3").src = document.getElementById("item3").src;
+                            currSpotCount++;
+                            ui.draggable.hide();
+                        } else if (currSpotCount == 4) {
+                            document.getElementById("box4").src = document.getElementById("item4").src;
+                            currSpotCount++;
+                            ui.draggable.hide();
+                        } else if (currSpotCount == 5) {
+                            document.getElementById("box5").src = document.getElementById("item5").src;
+                            currSpotCount++;
+                            ui.draggable.hide();
+                        } else if (currSpotCount == 6) {
+                            document.getElementById("box6").src = document.getElementById("item6").src;
+                            currSpotCount++;
+                            ui.draggable.hide();
+                        }
+                    },
+                    accept: ".items > div > center > img"
+                    }
+                });
+
+                $(".items > div").droppable({
+                    drop: function(event, ui) {
+                        amount = amount - 2;
+                        document.getElementById("display").innerHTML = amount;
+                        var copy = ui.draggable.html();
+                        currSpotCount--;
+                    }
+                });
+
+            });
+
+            function getAmount() {
+                return amount.innerHTML;
+            }
+        </script>
+        <div id="displayAmount">
+            <center>Total Amount in the Basket: $<span id="display">0</span>.00</center>
+        </div>
+        <br>
+        <br>
+        <div id="basketContent">
+            <center>Basket Content</center>
+        </div>
+        <table id="fixGrid" border=l width="150px" height="150px" border-spacing="5px">
+            <tr>
+                <div id="dragsources" class="basketItem">
+                    <div class="row">
+                        <td id="cell1">
+                            <img class="basketSpot" id="box1" src=http://1.bp.blogspot.com/-m8Fghxuruus/UR3vc1l_AqI/AAAAAAAAAf4/9EaQwAJymLo/s1600/empty.png>
+                        </td>
+                        <td id="cell2">
+                            <img class="basketSpot" id="box2" src=http://1.bp.blogspot.com/-m8Fghxuruus/UR3vc1l_AqI/AAAAAAAAAf4/9EaQwAJymLo/s1600/empty.png>
+                        </td>
+                        <td id="cell3">
+                            <img class="basketSpot" id="box3" src=http://1.bp.blogspot.com/-m8Fghxuruus/UR3vc1l_AqI/AAAAAAAAAf4/9EaQwAJymLo/s1600/empty.png>
+                        </td>
+                        <td id="cell4">
+                            <img class="basketSpot" id="box4" src=http://1.bp.blogspot.com/-m8Fghxuruus/UR3vc1l_AqI/AAAAAAAAAf4/9EaQwAJymLo/s1600/empty.png>
+                        </td>
+                        <td id="cell5">
+                            <img class="basketSpot" id="box5" src=http://1.bp.blogspot.com/-m8Fghxuruus/UR3vc1l_AqI/AAAAAAAAAf4/9EaQwAJymLo/s1600/empty.png>
+                        </td>
+                        <td id="cell6">
+                            <img class="basketSpot" id="box6" src=http://1.bp.blogspot.com/-m8Fghxuruus/UR3vc1l_AqI/AAAAAAAAAf4/9EaQwAJymLo/s1600/empty.png>
+                        </td>
+
+                    </div>
+                </div>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+    <script src="js/bootstrap.min.js "></script>
+    <!--    <script src="js/itemdrag.js"></script>-->
+
+</body>
+
+
+</html>

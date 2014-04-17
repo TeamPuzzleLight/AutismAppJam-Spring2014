@@ -10,11 +10,10 @@ $(function() {
             if ($(this).html() !== "-") {
                 $(this).html(ui.draggable.html());
                 ui.draggable.remove();
-
             }
         },
         accept: function(dropElement) {
-            return ($(this).html() !== "-");
+            return ($(this).html() !== "-" && $(this).html() === "");
         }
     });
 

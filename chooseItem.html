@@ -149,73 +149,6 @@
             </div>
         </div>
         <br>
-        <script>
-            $(function() {
-                $(".apple").draggable({
-                    revert: function() {
-                        if (currSpotCount !== 7) {
-                            return "invalid"
-                        } else {
-                            document.getElementById("message").innerHTML = "Your Basket is Full";
-                            return "invalid"
-                        }
-                    }
-                });
-
-                $(".basketSpot").draggable({
-                    revert: "invalid"
-                });
-
-                $("#basket").droppable({
-                    drop: function(event, ui) {
-                        amount = amount + 2;
-                        document.getElementById("display").innerHTML = amount;
-                        var copy = ui.draggable.html();
-                        if (currSpotCount == 1) {
-                            document.getElementById("box1").src = document.getElementById("item1").src;
-                            currSpotCount++;
-                            ui.draggable.hide();
-                        } else if (currSpotCount == 2) {
-                            document.getElementById("box2").src = document.getElementById("item2").src;
-                            currSpotCount++;
-                            ui.draggable.hide();
-                        } else if (currSpotCount == 3) {
-                            document.getElementById("box3").src = document.getElementById("item3").src;
-                            currSpotCount++;
-                            ui.draggable.hide();
-                        } else if (currSpotCount == 4) {
-                            document.getElementById("box4").src = document.getElementById("item4").src;
-                            currSpotCount++;
-                            ui.draggable.hide();
-                        } else if (currSpotCount == 5) {
-                            document.getElementById("box5").src = document.getElementById("item5").src;
-                            currSpotCount++;
-                            ui.draggable.hide();
-                        } else if (currSpotCount == 6) {
-                            document.getElementById("box6").src = document.getElementById("item6").src;
-                            currSpotCount++;
-                            ui.draggable.hide();
-                        }
-                    },
-                    accept: ".items > div > center > img"
-                    }
-                });
-
-                $(".items > div").droppable({
-                    drop: function(event, ui) {
-                        amount = amount - 2;
-                        document.getElementById("display").innerHTML = amount;
-                        var copy = ui.draggable.html();
-                        currSpotCount--;
-                    }
-                });
-
-            });
-
-            function getAmount() {
-                return amount.innerHTML;
-            }
-        </script>
         <div id="displayAmount">
             <center>Total Amount in the Basket: $<span id="display">0</span>.00</center>
         </div>
@@ -262,7 +195,7 @@
 
 
     <script src="js/bootstrap.min.js "></script>
-    <!--    <script src="js/itemdrag.js"></script>-->
+    <script src="js/itemdrag.js"></script>
 
 </body>
 

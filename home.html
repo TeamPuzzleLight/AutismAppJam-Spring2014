@@ -6,13 +6,27 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-
+    <script src="js/bootstrap.min.js "></script>
     <style>
-        li {
-            text-decoration: underline;
-            font-size: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        #menu {
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 24px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            border-color: #0099df;
+            border-style: solid;
+            border-width: 3px;
+        }
+        #menu li {
+            font-size: 30px;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            text-align: center;
+            background-color: white;
         }
         #start {
             float: none;
@@ -42,11 +56,20 @@
             text-decoration: none;
             text-align: center;
         }
-        body
-        {
+        .container {
             background-color: #0099df;
+            padding: 0;
         }
-        
+        #logo {
+            display: block;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        #start {
+            display: block;
+            margin: 0 auto;
+            padding: 30px;
+        }
     </style>
 </head>
 
@@ -54,51 +77,30 @@
 <body>
 
     <div class="container">
-        <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
+        <ul class="nav navbar-default" id="menu">
+            <li><a onclick="location.href='home.html'">Home</a>
+            </li>
+            <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
+            </li>
+            <li><a onclick="location.href='AboutUs.html'">About Us</a>
+            </li>
+            <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
+            </li>
+            <li><a onclick="location.href='ForParents.html'">For Parents</a>
+            </li>
 
-            <ul class="nav navbar-nav navbar-centered">
-                <li><a onclick="location.href='home.html'">Home</a>
-                </li>
-                <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
-                </li>
-                <li><a onclick="location.href='AboutUs.html'">About Us</a>
-                </li>
-                <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
-                </li>
-                <li><a onclick="location.href='ForParents.html'">For Parents</a>
-                </li>
-                
-            </ul>
+        </ul>
 
-        </nav>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <center>
-            <div>
-                <img id="logo" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
-            </div>
-        </center>
-        <br>
-        <br>
-        <br>
-        <br>
-        <center>
-            <div>
 
-                <button type="button" id="start" onclick="location.href='ShoppingList.html'">Start Game</button>
-            </div>
-        </center>
+        <img id="logo" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
+
+
+
+
+
+
+        <button type="button" id="start" onclick="location.href='ShoppingList.html'">Start Game</button>
 
 
 
@@ -111,11 +113,6 @@
 
     </div>
 
-
-
-
-    <script src="js/bootstrap.min.js "></script>
-    <!--    <script src="js/itemdrag.js"></script>-->
 </body>
 
 

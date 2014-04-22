@@ -14,6 +14,9 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        body {
+            background-color: #0099df;
+        }
         #backgroundBox {
             margin-top: 130px;
             border: solid;
@@ -25,48 +28,47 @@
             margin-left: auto;
             margin-right: auto;
         }
-        #shoppingList {
-            margin-top: 25px;
-            border: solid;
-            border-color: black;
-            width: 500px;
-            height: 650px;
-            margin-left: auto;
-            margin-right: auto;
+        #form {
+            font-family: "century gothic", Times;
+            margin-top: 30px;
         }
-        #text {
-            border: solid;
-            border-color: black;
-            width: 1500px;
-            height: 150px;
-            border-radius: 30px;
-            background: white;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
+        textarea {
+            height: 300px;
+            width: 800px;
+            font-size: 25px;
         }
+        #name1,
+        #email1 {
+            width: 800px;
+            height: 50px;
+            font-size: 25px;
+        }
+        #name,
+        #email,
         #message {
-            font-size: 50px;
-            margin-top: 35px;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 300px;
         }
-        body {
-            background-color: #0099df;
+        #send1, #reset1
+        {
+            width: 100px;
+            height: 40px;
+
+        }
+        input[type=submit], input[type=reset]
+        {
+            border: solid;
+            border-width: 2px;
+            font-weight: bold;
+            font-size: 15px;
+            
         }
     </style>
-    <script type="text/javascript">
-        setTimeout('nextScreen()', 4000);
 
-        function nextScreen() {
-            document.getElementById("message").innerHTML = "Please Add The Item Into Your Basket by Clicking on the Items";
-            $('#shoppingList').fadeOut(3000);
-            $('#backgroundBox').load('Game.html').hide('Game.html body').fadeIn(3000);
-            
 
-        }
-    </script>
+
 </head>
-
-
 
 <body>
     <div>
@@ -83,24 +85,40 @@
                 </li>
                 <li><a onclick="location.href='ForParents.html'">For Parents</a>
                 </li>
-                
+
             </ul>
 
         </nav>
-        
         <div id="backgroundBox">
-            <div id="shoppingList">
-
+            <div id="form">
+                <form id="subForm" action="contact.php" method="post">
+                    <p id="name">Your name</p>
+                    <center>
+                        <input type="text" name="cf_name" id="name1">
+                    </center>
+                    <br>
+                    <p id="email">Your e-mail</p>
+                    <center>
+                        <input type="text" name="cf_email" id="email1">
+                    </center>
+                    <br>
+                    <p id="message">Message</p>
+                    <center>
+                        <textarea name="cf_message"></textarea>
+                        <br>
+                        <input type="submit" value="Send" id="send1">
+                        <input type="reset" value="Clear" id="reset1">
+                    </center>
+                </form>
             </div>
         </div>
-        <div id="text">
-            <p id="message">Welcome To The Supermarket, Here is a Shopping List.</p>
-        </div>
-
     </div>
+
+
+
+
 
     <script src="js/bootstrap.min.js "></script>
     <!--    <script src="js/itemdrag.js"></script>-->
 </body>
-
 </html>

@@ -56,12 +56,13 @@
             height: 40px;
 
         }
-        input[type=submit], input[type=reset]
+        #send1
         {
             border: solid;
             border-width: 2px;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 20px;
+            width: 150px;
             
         }
     </style>
@@ -71,6 +72,7 @@
 </head>
 
 <body>
+    
     <div>
         <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
 
@@ -91,7 +93,7 @@
         </nav>
         <div id="backgroundBox">
             <div id="form">
-                <form id="subForm" action="contact.php" method="post">
+                <form id="subForm">
                     <p id="name">Your name</p>
                     <center>
                         <input type="text" name="cf_name" id="name1">
@@ -106,14 +108,18 @@
                     <center>
                         <textarea name="cf_message"></textarea>
                         <br>
-                        <input type="submit" value="Send" id="send1">
-                        <input type="reset" value="Clear" id="reset1">
+                        <button id="send1" onclick='submit()'> Submit </button>
                     </center>
                 </form>
             </div>
         </div>
     </div>
-
+    <script>
+    function submit()
+        {
+            window.alert("Message Sent");
+        }
+    </script>
 
 
 

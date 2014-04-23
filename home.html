@@ -31,39 +31,21 @@
         #menu li:hover {
             text-decoration: underline;
         }
-        #start {
-            float: none;
-            background: lightblue;
-            -webkit-border-top-left-radius: 26px;
-            -moz-border-radius-topleft: 26px;
-            border-top-left-radius: 26px;
-            -webkit-border-top-right-radius: 26px;
-            -moz-border-radius-topright: 26px;
-            border-top-right-radius: 26px;
-            -webkit-border-bottom-right-radius: 26px;
-            -moz-border-radius-bottomright: 26px;
-            border-bottom-right-radius: 26px;
-            -webkit-border-bottom-left-radius: 26px;
-            -moz-border-radius-bottomleft: 26px;
-            border-bottom-left-radius: 26px;
-            text-indent: 0;
-            border: 3px solid black;
-            display: inline-block;
-            color: black;
-            font-family: Comic Sans MS;
-            font-size: 40px;
-            font-style: normal;
-            height: 100px;
-            line-height: 80px;
-            width: 400px;
-            text-decoration: none;
+        #startgame {
+            display: block;
+            margin: 0 auto;
             text-align: center;
+            font-size: 50px;
+            font-family: "Comic Sans MS", "Arial";
+            margin-top: 30px;
         }
         body {
             background-color: #0099df;
         }
         .container {
             background-color: #0099df;
+            width: auto;
+            height: auto;
         }
         #logo {
             background-color: white;
@@ -95,30 +77,11 @@
         </li>
 
     </ul>
-    <div class="container">
-
-
-
-
-        <img id="logo" src=http://www.clker.com/cliparts/3/7/5/6/11949861182029597463an_apple_01.svg.hi.png>
-
-
-
-
-
-
-        <button type="button" id="start" onclick="location.href='ShoppingList.html'">Start Game</button>
-
-
-
-
-
-
-
-
-
-
+    <div class="container" id="gamescreen">
+        <img id="logo" src="images/logo.jpg">
+        <button class="btn btn-info" type="button" id="startgame">Start Game</button>
     </div>
+    <script src="js/game.js"></script>
 
 </body>
 

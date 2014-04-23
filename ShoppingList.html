@@ -1,106 +1,71 @@
-<!DOCTYPE html>
-<html>
+<style>
+    * {
+        font-family: "Comic Sans Ms", "Arial"
+    }
+    #shoppinglist {
+        border: 2px, solid, black;
+        list-style: none;
+        padding: 24px;
+        font-size: 36px;
+        text-align: center;
+    }
+    #shoppinglist li:first-child {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    #shoopinglist li {
+        margin: 12px;
+    }
+    #shoppinglistcontainer {
+        display: inline-block;
+        margin: 0 auto;
+        float: left;
+    }
+    #gamearea {
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    #basket {
+        display: inline-block;
+        float: right;
+        width: 300px;
+        height: 600px;
+        border: 3px solid black;
+    }
+</style>
+<div id="gamescreencontainer">
+    <div id="shoppinglistcontainer">
+        <style>
+        </style>
 
-<head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <ul id="shoppinglist">
+            <li>
+                Shopping List
+            </li>
+            <li>
+                2 Apples
+            </li>
+            <li>
+                3 Bananas
+            </li>
+            <li>
+                1 Broccoli
+            </li>
+            <li>
+                2 Carrots
+            </li>
+            <li>
+                5 Tomatos
+            </li>
 
-    <style>
-        li {
-            text-decoration: underline;
-            font-size: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        #backgroundBox {
-            margin-top: 130px;
-            border: solid;
-            border-color: black;
-            width: 1500px;
-            height: 700px;
-            border-radius: 30px;
-            background: white;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #shoppingList {
-            margin-top: 25px;
-            border: solid;
-            border-color: black;
-            width: 500px;
-            height: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #text {
-            border: solid;
-            border-color: black;
-            width: 1500px;
-            height: 150px;
-            border-radius: 30px;
-            background: white;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-        #message {
-            font-size: 50px;
-            margin-top: 35px;
-        }
-        body {
-            background-color: #0099df;
-        }
-    </style>
-    <script type="text/javascript">
-        setTimeout('nextScreen()', 4000);
-
-        function nextScreen() {
-            document.getElementById("message").innerHTML = "Please Add The Item Into Your Basket by Clicking on the Items";
-            $('#shoppingList').fadeOut(3000);
-            $('#backgroundBox').load('Game.html').hide('Game.html body').fadeIn(3000);
-            
-
-        }
-    </script>
-</head>
-
-
-
-<body>
-    <div>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
-
-            <ul class="nav navbar-nav navbar-centered">
-                <li><a onclick="location.href='home.html'">Home</a>
-                </li>
-                <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
-                </li>
-                <li><a onclick="location.href='AboutUs.html'">About Us</a>
-                </li>
-                <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
-                </li>
-                <li><a onclick="location.href='ForParents.html'">For Parents</a>
-                </li>
-                
-            </ul>
-
-        </nav>
-        
-        <div id="backgroundBox">
-            <div id="shoppingList">
-
-            </div>
-        </div>
-        <div id="text">
-            <p id="message">Welcome To The Supermarket, Here is a Shopping List.</p>
-        </div>
-
+        </ul>
+    </div>
+    <div id="gamearea">
+        <img src="images/fullshelf.png" />
     </div>
 
-    <script src="js/bootstrap.min.js "></script>
-    <!--    <script src="js/itemdrag.js"></script>-->
-</body>
+    <div id="basket">
 
-</html>
+    </div>
+</div>

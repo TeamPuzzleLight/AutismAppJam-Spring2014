@@ -22,6 +22,7 @@
         float: left;
     }
     #gamearea {
+        position: relative;
         display: inline-block;
         border: 2px solid black;
         border-radius: 10px;
@@ -29,9 +30,23 @@
     #basket {
         display: inline-block;
         float: right;
-        width: 300px;
+        width: 320px;
         height: 600px;
-        border: 3px solid black;
+        border: 2px solid black;
+        padding: 5px;
+    }
+    #gamearea div {
+        position: absolute;
+        display: inline;
+    }
+    #gamearea div:hover {
+        border: 2px solid black;
+    }
+    .foodinbasket {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 3px;
     }
 </style>
 <div id="gamescreencontainer">
@@ -44,28 +59,33 @@
                 Shopping List
             </li>
             <li>
-                2 Apples
+                <span id="appleleft">2</span> Apples
             </li>
             <li>
-                3 Bananas
+                <span id="bananaleft">3</span> Bananas
             </li>
             <li>
-                1 Broccoli
+                <span id="broccolileft">1</span>Broccoli
             </li>
             <li>
-                2 Carrots
+                <span id="carrotleft">2</span> Carrots
             </li>
             <li>
-                5 Tomatos
+                <span id="tomatoleft">1</span> Tomatos
             </li>
 
         </ul>
     </div>
     <div id="gamearea">
         <img src="images/fullshelf.png" />
+        <div style="left:158px;top:40px;width:130px;height:120px" id="applediv"></div>
+        <div style="left:350px;top:22px;width:165px;height:156px" id="bananadiv"></div>
+        <div style="left:584px;top:23px;width:178px;height:158px" id="broccolidiv"></div>
+        <div style="left:184px;top:292px;width:214px;height:137px" id="carrotdiv"></div>
+        <div style="left:484px;top:264px;width:185px;height:157px" id="tomatodiv"></div>
     </div>
 
     <div id="basket">
-
+        <h3 style="text-align:center">Basket</h3>
     </div>
 </div>

@@ -1,7 +1,7 @@
 $(function() {
     $('#startgame').click(function() {
 
-        $('body').append('<div id="instruction"><h2 id="content">Please add the items into your basket by clicking on them</h2></div>');
+        $('body').append('<div id="instruction"><h2 id="content" style="border: 3px, solid, black; background:white;">Please add the items into your basket by clicking on them</h2></div>');
         //apple, banana, broccoli, carrot, tomato
         var foodimages = ["images/apple.jpg", "images/banana.jpg", "images/Broccoli.jpg", "images/carrot.jpg", "images/tomato.jpg"];
         var foodCount = [2, 3, 1, 2, 1];

@@ -9,7 +9,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <style>
-        li {
+        a {
             text-decoration: underline;
             font-size: 50px;
             margin-top: 20px;
@@ -23,11 +23,68 @@
             border: solid;
             border-color: black;
             width: 1500px;
-            height: 700px;
+            height: 850px;
             border-radius: 30px;
             background: white;
             margin-left: auto;
             margin-right: auto;
+        }
+        #generalIns
+        {
+            font-family: 'Dosis', 'sans-serif';
+            font-size: 50px;
+            margin-right: 50px;
+            margin-top: 30px;
+        }
+        #list
+        {
+            font-size: 30px;
+            font-family: 'Dosis', 'sans-serif';
+            text-decoration: none;
+            margin-left: 50px;
+            margin-right: 50px;
+            
+        }
+        #instructionBox
+        {
+            margin-top: 50px;
+            border: solid;
+            border-color: black;
+            width: 700px;
+            height: 800px;
+            border-radius: 30px;
+            background: white;
+        }
+        #pic
+        {
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+        }
+        #phrase
+        {
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            font-family: 'Dosis', 'sans-serif';
+            font-size: 30px;
+        }
+        btn
+        {
+            border: solid;
+            border-width: 2px;
+            margin-top: 10px;
+            width: 200px;
+            height: 80px;
+            font-size: 50px;
+            background: red;
+            border-color: black;
+            border-radius: 30px;
+            position: absolute;
+            margin-right: auto;
+            margin-left: auto;
+            color: white;
+            
         }
     </style>
 
@@ -55,14 +112,71 @@
 
         </nav>
         <div id="backgroundBox">
-        
+            <div style="margin-left:50px">
+                <p id="generalIns"><b>In this activity</b>, we want you to help those diagnosed with autism by helping them connect what they see on the screen to the physical world. Since some people on the spectrum have difficulty relating digital objects (such as those seen on screens) to the world we are actually part of, we need you to carry out this shopping and money handling experience in a way that lets the autistic person do in real life what they do in our game.</p><br>
+                <div style="font-size:50px; text-decoration:underline; ">For this activity, you will need: </div>
+                <br>
+                <div id="list">
+                <li><b>Money</b> -- choose how much you want and what you want to use (bills or coins). Make sure you have enough!</li>
+                <li><b>Shopping items</b> -- you can use food items, office supplies, or whatever you want!</li>
+                <li><b>Price stickers</b> -- you can get paper and write prices on them, then use tape to stick to items.</li>
+                <li><b>Shopping bag/basket (optional)</b> -- used to carry items once they are selected for purchase.</li>
+                <li><b>Shopping list (optional)</b> -- used to help your child select the items they need.</li>
+                </div>
+                            
+            </div>
         
         </div>
+        <center>
+        <div id="instructionBox">
+            <img id="pic" src="images/apple.jpg">
+            <div>
+                <p id="phrase">
+            <b>1. </b> Make sure your child has enough money to pay and you have enough for change. Tell them how much money they have and that they can spend only that much or less. Tell them what to buy. Guide them through choosing the items if they can’t figure out what they should be looking for. Whenever they select an item, tell them how much the item costs and how much money they would have remaining if they buy it.<br><br><br>    
+            </p>
+                </div>
+            <div>
+            <btn id="next" onclick="next()">Next</btn>
+                </div>
+        
+        
+        </div></center>
+            <br>
+        
 
     </div>
 
 
-
+    <script>
+        var des = ["<b>1. </b>Make sure your child has enough money to pay and you have enough for change. Tell them how much money they have and that they can spend only that much or less. Tell them what to buy. Guide them through choosing the items if they can’t figure out what they should be looking for. Whenever they select an item, tell them how much the item costs and how much money they would have remaining if they buy it.<br><br><br>", "<b>2. </b>Once your child is ready to pay, you (or another person) becomes the cashier! List the items the child has gathered, and put the prices to the right (sort of like a receipt). Tell them how much they need to pay. Allow them to solve this process for a while, but if they are truly stuck, help them figure out what they need for payment. If you owe them change, give it to them while telling them how much change you’re supposed to give. Tell them to count (out loud, if necessary) and ensure that the change is correct.", "<b>3. </b>Repeat as many times as necessary for your child to understand the concept with little or no help from you. Feel free to use different items in each session so that they understand they can buy different things as long as they have sufficient money. By doing this activity, you are making an impact in your child’s life, allowing them to gain more independence. We thank you for helping us carry out our goal!<br><br><br>"];
+        var i = ['images/apple.jpg', 'images/dollar.jpg','images/Repeat.png'];
+        var count = 1;
+        function changeCount()
+        {
+            if(count==2)
+            {
+                count = 0;
+            }
+            else{ count++};
+        }
+        function next()
+        {
+            if(count == 1)
+            {
+                document.getElementById("pic").style.width = '400px';
+            }
+            else
+            {
+                document.getElementById("pic").style.width = '200px';
+            }
+            document.getElementById("pic").src = i[count];
+            document.getElementById("phrase").innerHTML = des[count];
+            changeCount();
+        }
+        
+        
+    </script>
+        
     <script src="js/bootstrap.min.js "></script>
     <!--    <script src="js/itemdrag.js"></script>-->
 

@@ -9,17 +9,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <style>
-        li {
-            text-decoration: underline;
-            font-size: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        body {
-            background-color: #0099df;
-        }
         #backgroundBox {
-            margin-top: 130px;
+            margin-top: 24px;
             border: solid;
             border-color: black;
             width: 1500px;
@@ -79,6 +70,35 @@
             -moz-transform-origin: bottom left;
             -webkit-transform-origin: bottom left;
         }
+        #menu {
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 24px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            border-bottom-color: : #0099df;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+        }
+        #menu li {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            text-align: center;
+            background-color: #b1f1ff;
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            font-family: "Dosis", "San Serif";
+        }
+        #menu li a {
+            font-size: 30px;
+        }
+        body {
+            background-color: #b1f1ff;
+        }
     </style>
 
 
@@ -99,24 +119,19 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <div>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
+        <ul class="nav navbar-default" id="menu">
+            <li><a class="btn" onclick="location.href='home.html'">Home</a>
+            </li>
+            <li><a class="btn" onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
+            </li>
+            <li><a class="btn" onclick="location.href='AboutUs.html'">About Us</a>
+            </li>
+            <li><a class="btn" onclick="location.href='ContactUs.html'">Contact Us</a>
+            </li>
+            <li><a class="btn" onclick="location.href='ForParents.html'">For Parents</a>
+            </li>
 
-            <ul class="nav navbar-nav navbar-centered">
-                <li><a onclick="location.href='home.html'">Home</a>
-                </li>
-                <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
-                </li>
-                <li><a onclick="location.href='AboutUs.html'">About Us</a>
-                </li>
-                <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
-                </li>
-                <li><a onclick="location.href='ForParents.html'">For Parents</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
+        </ul>
         <div id="backgroundBox">
             <p id="teamName">Team Puzzle Light
                 <iframe src="http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/TeamPuzzleLight;send=false&amp;layout=standard&amp;width=400px&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=50px" scrolling="no" frameborder="0" style="margin-top:100px;margin-left:50px;border:none; overflow:hidden; width:200px; height:50px;" allowTransparency="true"></iframe>

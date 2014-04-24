@@ -9,17 +9,8 @@
     <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 
     <style>
-        li {
-            text-decoration: underline;
-            font-size: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        body {
-            background-color: #0099df;
-        }
         #backgroundBox {
-            margin-top: 130px;
+            margin-top: 24px;
             border: solid;
             border-color: black;
             width: 1500px;
@@ -51,20 +42,52 @@
             font-weight: bold;
             margin-left: 300px;
         }
-        #send1, #reset1
-        {
+        #send1,
+        #reset1 {
             width: 100px;
             height: 40px;
-
         }
-        #send1
-        {
+        #send1 {
             border: solid;
             border-width: 2px;
             font-weight: bold;
             font-size: 20px;
             width: 150px;
-            
+        }
+        #menu {
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 24px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            border-bottom-color: : #0099df;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+        }
+        #menu li {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            text-align: center;
+            background-color: #b1f1ff;
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            font-family: "Dosis", "San Serif";
+        }
+        #menu li a {
+            font-size: 30px;
+        }
+        body {
+            background-color: #b1f1ff;
+        }
+        #subForm {
+            font-family: "Dosis", "Sans Serif";
+            font-size: 30px;
+            padding: 40px;
+            margin: 20px;
         }
     </style>
 
@@ -73,52 +96,44 @@
 </head>
 
 <body>
-    
+
     <div>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
+        <ul class="nav navbar-default" id="menu">
+            <li><a class="btn" onclick="location.href='home.html'">Home</a>
+            </li>
+            <li><a class="btn" onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
+            </li>
+            <li><a class="btn" onclick="location.href='AboutUs.html'">About Us</a>
+            </li>
+            <li><a class="btn" onclick="location.href='ContactUs.html'">Contact Us</a>
+            </li>
+            <li><a class="btn" onclick="location.href='ForParents.html'">For Parents</a>
+            </li>
 
-            <ul class="nav navbar-nav navbar-centered">
-                <li><a onclick="location.href='home.html'">Home</a>
-                </li>
-                <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
-                </li>
-                <li><a onclick="location.href='AboutUs.html'">About Us</a>
-                </li>
-                <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
-                </li>
-                <li><a onclick="location.href='ForParents.html'">For Parents</a>
-                </li>
-
-            </ul>
-
-        </nav>
+        </ul>
         <div id="backgroundBox">
             <div id="form">
-                <form id="subForm">
-                    <p id="name">Your name</p>
-                    <center>
-                        <input type="text" name="cf_name" id="name1">
-                    </center>
-                    <br>
-                    <p id="email">Your e-mail</p>
-                    <center>
-                        <input type="text" name="cf_email" id="email1">
-                    </center>
-                    <br>
-                    <p id="message">Message</p>
-                    <center>
-                        <textarea name="cf_message"></textarea>
-                        <br>
-                        <button id="send1" onclick='submit()'> Submit </button>
-                    </center>
+                <form role="form" id="subForm">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="email" class="form-control" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Message</label>
+                        <textarea type="email" class="form-control" placeholder="Enter Message"></textarea>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
     <script>
-    function submit()
-        {
-            window.alert("Message Sent");
+        function submit() {
+            alert("Message Sent");
         }
     </script>
 
@@ -128,4 +143,5 @@
     <script src="js/bootstrap.min.js "></script>
     <!--    <script src="js/itemdrag.js"></script>-->
 </body>
+
 </html>

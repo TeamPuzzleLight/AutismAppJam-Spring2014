@@ -4,9 +4,8 @@
 <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+
     <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js "></script>
     <style>
         #menu {
@@ -22,15 +21,21 @@
             border-bottom-width: 3px;
         }
         #menu li {
-            font-size: 30px;
             width: auto;
             height: auto;
             display: inline-block;
             text-align: center;
-            background-color: white;
+            background-color: #b1f1ff;
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            font-family: "Dosis", "San Serif";
         }
-        #menu li:hover {
-            text-decoration: underline;
+        #menu li a {
+            font-size: 30px;
+        }
+        #menu li a:hover {
+            /*text-decoration: underline;*/
         }
         #startgame {
             display: block;
@@ -41,10 +46,9 @@
             margin-top: 30px;
         }
         body {
-            background-color: #0099df;
+            background-color: #b1f1ff;
         }
         .container {
-            background-color: #0099df;
             width: auto;
             height: auto;
         }
@@ -53,9 +57,9 @@
             display: block;
             margin: 0 auto;
             margin-top: 20px;
-            width:500px;
-            height: 750px;
-            box-shadow: 50px 20px 0px rgba(0,0,0,.1);
+            width: 400px;
+            height: 580px;
+            box-shadow: 50px 20px 0px rgba(0, 0, 0, .1);
             border-radius: 30px;
         }
         #start {
@@ -63,7 +67,6 @@
             display: block;
             margin: 0 auto;
             margin-top: 20px;
-            
         }
         #instruction {
             text-align: center;
@@ -84,15 +87,15 @@
 
 <body>
     <ul class="nav navbar-default" id="menu">
-        <li><a onclick="location.href='home.html'">Home</a>
+        <li><a class="btn" onclick="location.href='home.html'">Home</a>
         </li>
-        <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
+        <li><a class="btn" onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
         </li>
-        <li><a onclick="location.href='AboutUs.html'">About Us</a>
+        <li><a class="btn" onclick="location.href='AboutUs.html'">About Us</a>
         </li>
-        <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
+        <li><a class="btn" onclick="location.href='ContactUs.html'">Contact Us</a>
         </li>
-        <li><a onclick="location.href='ForParents.html'">For Parents</a>
+        <li><a class="btn" onclick="location.href='ForParents.html'">For Parents</a>
         </li>
 
     </ul>

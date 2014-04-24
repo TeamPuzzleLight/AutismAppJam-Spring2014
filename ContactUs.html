@@ -90,7 +90,11 @@
             margin: 20px;
         }
     </style>
-
+    <script>
+        function submit() {
+            alert("Message Sent");
+        }
+    </script>
 
 
 </head>
@@ -127,15 +131,12 @@
                         <label for="exampleInputEmail1">Message</label>
                         <textarea type="email" class="form-control" placeholder="Enter Message"></textarea>
                     </div>
+                    <button type="submit" class="btn btn-primary" onclick="submit();">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-    <script>
-        function submit() {
-            alert("Message Sent");
-        }
-    </script>
+
 
 
 

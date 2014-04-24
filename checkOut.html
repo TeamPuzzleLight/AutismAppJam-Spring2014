@@ -8,17 +8,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <style>
-        li {
-            text-decoration: underline;
-            font-size: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        body {
-            background-color: #0099df;
-        }
         #backgroundBox {
-            margin-top: 130px;
+            margin-top: 24px;
             border: solid;
             border-color: black;
             width: 1500px;
@@ -28,20 +19,17 @@
             margin-left: auto;
             margin-right: auto;
         }
-        #machine
-        {
+        #machine {
             width: 500px;
             height: 500px;
             margin-left: 100px;
             margin-top: 100px;
             float: left;
         }
-        #content
-        {
-            float:none;
+        #content {
+            float: none;
         }
-        #pay
-        {
+        #pay {
             width: 1500px;
             height: 100px;
             background: white;
@@ -51,9 +39,37 @@
             margin-left: auto;
             margin-right: auto;
         }
-        #pay
-        {
+        #pay {
             font-size: 50px;
+        }
+        #menu {
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 24px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            border-bottom-color: : #0099df;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+        }
+        #menu li {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            text-align: center;
+            background-color: #b1f1ff;
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            font-family: "Dosis", "San Serif";
+        }
+        #menu li a {
+            font-size: 30px;
+        }
+        body {
+            background-color: #b1f1ff;
         }
     </style>
 
@@ -63,39 +79,35 @@
 
 <body>
     <div>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
+        <ul class="nav navbar-default" id="menu">
+            <li><a class="btn" onclick="location.href='home.html'">Home</a>
+            </li>
+            <li><a class="btn" onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
+            </li>
+            <li><a class="btn" onclick="location.href='AboutUs.html'">About Us</a>
+            </li>
+            <li><a class="btn" onclick="location.href='ContactUs.html'">Contact Us</a>
+            </li>
+            <li><a class="btn" onclick="location.href='ForParents.html'">For Parents</a>
+            </li>
 
-            <ul class="nav navbar-nav navbar-centered">
-                <li><a onclick="location.href='home.html'">Home</a>
-                </li>
-                <li><a onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
-                </li>
-                <li><a onclick="location.href='AboutUs.html'">About Us</a>
-                </li>
-                <li><a onclick="location.href='ContactUs.html'">Contact Us</a>
-                </li>
-                <li><a onclick="location.href='ForParents.html'">For Parents</a>
-                </li>
-                
-            </ul>
-
-        </nav>
+        </ul>
         <div id="backgroundBox">
             <div>
-            <img id="machine" src="images/self%20checkout.png">
+                <img id="machine" src="images/self%20checkout.png">
             </div>
             <div id="content">
                 <center>
-                <div style="border:3px, solid, black; width:500px; height:150px; font-size:100px;">Total: $6</div>
+                    <div style="border:3px, solid, black; width:500px; height:150px; font-size:100px;">Total: $6</div>
                 </center>
             </div>
-        
+
         </div>
         <div id="pay">
             <center>
-            <span id="amount">0</span>.00
+                <span id="amount">0</span>.00
             </center>
-        
+
         </div>
 
     </div>

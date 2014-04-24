@@ -3,11 +3,10 @@ $(function() {
 
         $('body').append('<div id="instruction"><h2 id="content">Please add the items into your basket by clicking on them</h2></div>');
         //apple, banana, broccoli, carrot, tomato
-        var food = [2, 3, 1, 2, 1];
         var foodimages = ["images/apple.jpg", "images/banana.jpg", "images/Broccoli.jpg", "images/carrot.jpg", "images/tomato.jpg"];
         var foodCount = [2, 3, 1, 2, 1];
         var count = 0;
-        var foodName=["Apple", "Banana", "Broccoli", "Carrot", "Tomato"];
+        var foodName = ["Apple", "Banana", "Broccoli", "Carrot", "Tomato"];
         var allZero = function() {
             for (var i = 0; i < 5; i++) {
                 if (foodCount[i] != 0) {
@@ -20,13 +19,10 @@ $(function() {
             $($('#shoppinglist li span')[index]).html(foodCount[index]);
 
         };
-        var updateInstruction = function()
-        {
+        var updateInstruction = function() {
             var s = "";
-            for(var i = 0; i<5; i++)
-            {
-                if(foodCount[i] < 0)
-                {
+            for (var i = 0; i < 5; i++) {
+                if (foodCount[i] < 0) {
                     s += "You Took Too many" + foodName[i] + "<br>";
                 }
             }
@@ -40,13 +36,13 @@ $(function() {
             $('#gamearea div').click(function() {
                 var it = null;
                 var index = $(this).index() - 1;
-                food[index] -= 1;
+                foodCount[index] -= 1;
                 //                $($('#shoppinglist li span')[index]).html(food[index] < 0 ? '0' : food[index]);
 
                 var newimage = '<img src=' + foodimages[index] + " class=foodinbasket alt=" + "'" + index + "'" + "/>";
                 console.log(newimage);
                 $('#basket').append(newimage);
-                foodCount[index] -= 1;
+
                 updateShoppingList(index);
                 updateInstruction();
                 if (allZero()) {
@@ -61,7 +57,6 @@ $(function() {
                 var source = $(event.currentTarget);
                 var i = source.attr('alt');
                 console.log(i);
-                food[i] += 1;
                 foodCount[i] += 1;
                 updateShoppingList(i);
                 updateInstruction();

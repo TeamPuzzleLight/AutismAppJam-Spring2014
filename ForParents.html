@@ -9,17 +9,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <style>
-        a {
-            text-decoration: underline;
-            font-size: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        body {
-            background-color: #0099df;
-        }
         #backgroundBox {
-            margin-top: 130px;
+            margin-top: 24px;
             border: solid;
             border-color: black;
             width: 1500px;
@@ -161,51 +152,47 @@
                         <br>
                     </p>
                 </div>
-<<<<<<< HEAD
-            <div>
-            <btn class="btn" type="button" id="next" onclick="next()">Next</btn>
-=======
+
                 <div>
-                    <btn class='btn btn-primary' id="next" onclick="next()">Next</btn>
->>>>>>> 9c34588272206669ed06727cc1e5808cae15622f
+                    <btn class="btn btn-primary" type="button" id="next" onclick="next()">Next</btn>
+
+
+
                 </div>
-
-
-            </div>
         </center>
         <br>
 
 
-    </div>
+        </div>
 
 
-    <script>
-        var des = ["<b>1. </b>Make sure your child has enough money to pay and you have enough for change. Tell them how much money they have and that they can spend only that much or less. Tell them what to buy. Guide them through choosing the items if they can’t figure out what they should be looking for. Whenever they select an item, tell them how much the item costs and how much money they would have remaining if they buy it.<br><br><br>", "<b>2. </b>Once your child is ready to pay, you (or another person) becomes the cashier! List the items the child has gathered, and put the prices to the right (sort of like a receipt). Tell them how much they need to pay. Allow them to solve this process for a while, but if they are truly stuck, help them figure out what they need for payment. If you owe them change, give it to them while telling them how much change you’re supposed to give. Tell them to count (out loud, if necessary) and ensure that the change is correct.", "<b>3. </b>Repeat as many times as necessary for your child to understand the concept with little or no help from you. Feel free to use different items in each session so that they understand they can buy different things as long as they have sufficient money. By doing this activity, you are making an impact in your child’s life, allowing them to gain more independence. We thank you for helping us carry out our goal!<br><br><br>"];
-        var i = ['images/apple.jpg', 'images/dollar.jpg', 'images/Repeat.png'];
-        var count = 1;
+        <script>
+            var des = ["<b>1. </b>Make sure your child has enough money to pay and you have enough for change. Tell them how much money they have and that they can spend only that much or less. Tell them what to buy. Guide them through choosing the items if they can’t figure out what they should be looking for. Whenever they select an item, tell them how much the item costs and how much money they would have remaining if they buy it.<br><br><br>", "<b>2. </b>Once your child is ready to pay, you (or another person) becomes the cashier! List the items the child has gathered, and put the prices to the right (sort of like a receipt). Tell them how much they need to pay. Allow them to solve this process for a while, but if they are truly stuck, help them figure out what they need for payment. If you owe them change, give it to them while telling them how much change you’re supposed to give. Tell them to count (out loud, if necessary) and ensure that the change is correct.", "<b>3. </b>Repeat as many times as necessary for your child to understand the concept with little or no help from you. Feel free to use different items in each session so that they understand they can buy different things as long as they have sufficient money. By doing this activity, you are making an impact in your child’s life, allowing them to gain more independence. We thank you for helping us carry out our goal!<br><br><br>"];
+            var i = ['images/apple.jpg', 'images/dollar.jpg', 'images/Repeat.png'];
+            var count = 1;
 
-        function changeCount() {
-            if (count == 2) {
-                count = 0;
-            } else {
-                count++
-            };
-        }
-
-        function next() {
-            if (count == 1) {
-                document.getElementById("pic").style.width = '400px';
-            } else {
-                document.getElementById("pic").style.width = '200px';
+            function changeCount() {
+                if (count == 2) {
+                    count = 0;
+                } else {
+                    count++
+                };
             }
-            document.getElementById("pic").src = i[count];
-            document.getElementById("phrase").innerHTML = des[count];
-            changeCount();
-        }
-    </script>
 
-    <script src="js/bootstrap.min.js "></script>
-    <!--    <script src="js/itemdrag.js"></script>-->
+            function next() {
+                if (count == 1) {
+                    document.getElementById("pic").style.width = '400px';
+                } else {
+                    document.getElementById("pic").style.width = '200px';
+                }
+                document.getElementById("pic").src = i[count];
+                document.getElementById("phrase").innerHTML = des[count];
+                changeCount();
+            }
+        </script>
+
+        <script src="js/bootstrap.min.js "></script>
+        <!--    <script src="js/itemdrag.js"></script>-->
 
 
 </body>

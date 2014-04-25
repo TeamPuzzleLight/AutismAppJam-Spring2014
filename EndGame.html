@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    <script src="js/bootstrap.min.js "></script>
+    <style>
+        #menu {
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 24px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            border-bottom-color: : #0099df;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+        }
+        #menu li {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            text-align: center;
+            background-color: #b1f1ff;
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            font-family: "Dosis", "San Serif";
+        }
+        #menu li a {
+            font-size: 30px;
+        }
+        body {
+            background-color: #b1f1ff;
+        }
+        .container {
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+        #box
+        {
+            width: 1500px;
+            height: 800px;
+            background: white;
+            margin-top: 50px;
+            border: 3px solid black;
+            border-radius: 30px;
+        }
+        #shoppinglist{
+            border: 3px solid black;
+            list-style: none;
+            padding: 24px;
+            font-size: 36px;
+            text-align: center;
+            background:white; 
+            border-radius:30px; 
+            margin-top: 50px;
+            margin-left: 50px;
+            width:500px;
+            height: 500px;
+            float: left;
+        
+        }
+        #shoppinglist li:first-child{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        #shoppinglist li {
+            margin: 12px;
+        }
+        #paid, #change
+        {
+            width: 700px;
+            height: 80px;
+            border: 3px solid black;
+            border-radius:30px;
+            margin-left: 600px;
+            margin-top: 50px;
+            background: white;
+        }
+        #total
+        {
+            width: 700px;
+            height: 80px;
+            border: 3px solid black;
+            border-radius:30px;
+            margin-left: 600px;
+            margin-top: 150px;
+            background: white;
+        }
+        #price, #pay, #changes, #again
+        {
+            font-size: 50px;
+            font-family: "Dosis", "San Serif";
+            text-align: center;
+            
+        }
+        btn
+        {
+            width: 300px;
+            height: 100px;
+            margin-left: 300px;
+            margin-top: 120px;
+        }
+     </style>
+</head>
+
+
+<body>
+    <ul class="nav navbar-default" id="menu">
+        <li><a class="btn" onclick="location.href='home.html'">Home</a>
+        </li>
+        <li><a class="btn" onclick="location.href='WhatIs.html'">What is Puzzle Light?</a>
+        </li>
+        <li><a class="btn" onclick="location.href='AboutUs.html'">About Us</a>
+        </li>
+        <li><a class="btn" onclick="location.href='ContactUs.html'">Contact Us</a>
+        </li>
+        <li><a class="btn" onclick="location.href='ForParents.html'">For Parents</a>
+        </li>
+
+    </ul>
+    <div id="box" class="container">
+        <ul id="shoppinglist">
+            <li>
+                Items Bought:
+            </li>
+            <li>
+                <span id="appleleft">2</span> Apples
+            </li>
+            <li>
+                <span id="bananaleft">3</span> Bananas
+            </li>
+            <li>
+                <span id="broccolileft">1</span> Broccoli
+            </li>
+            <li>
+                <span id="carrotleft">2</span> Carrots
+            </li>
+            <li>
+                <span id="tomatoleft">1</span> Tomatos
+            </li>
+
+        </ul>
+    <div id="total">
+        <p id="price">Price: $6</p>
+    </div> 
+    <div id="paid">
+        <p id="pay">Paid: $6</p>
+    </div> 
+    <div id="change">
+        <p id="changes">Changes from Cashier: $0</p>
+    </div> 
+    <btn class="btn btn-primary" type="button" id="again" onclick="location.replace('home.html')">Play Again</btn>
+    </div>
+    
+
+</body>
+
+
+</html>

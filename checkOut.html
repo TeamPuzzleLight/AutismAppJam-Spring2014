@@ -8,8 +8,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <style>
-        #backgroundBox
-        {
+        #backgroundBox {
             margin-top: 24px;
             border: solid;
             border-color: black;
@@ -49,36 +48,35 @@
         body {
             background-color: #b1f1ff;
         }
-        #wallet {
-            width: 1000px;
-            height: 600px;
-        }
         .container {
             border: 2px solid white;
         }
-        #checkList{
+        #checkList {
             border: 3px solid black;
             list-style: none;
             padding: 24px;
             font-size: 36px;
             text-align: center;
-            background:white; 
-            border-radius:30px; 
+            background: white;
+            border-radius: 30px;
             margin-top: 50px;
             margin-left: 50px;
-            width:500px;
+            width: 500px;
             height: 500px;
             float: left;
             font-family: "Dosis", "San Serif";
         }
-        #checkList li:first-child{
+        #checkList li:first-child {
             font-size: 50px;
             font-weight: bold;
             font-family: "Dosis", "San Serif";
         }
         #checkList li {
-        margin: 10px;
-    }
+            margin: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
     </style>
 
 
@@ -100,51 +98,52 @@
             </li>
 
         </ul>
-        <div id="backgroundBox" class="container">
+        <div class="container">
             <div class="row">
                 <img class="col-lg-6" id="machine" src="images/self%20checkout.png">
                 <div class="col-lg-6" id="checkList">
-                    
+
                     <ul style="list-style-type: none;">
                         <li>Check List</li>
                         <li>Apple: 2</li>
-                        <li>Banana: 3 </li>
+                        <li>Banana: 3</li>
                         <li>Broccoli: 1</li>
-                        <li>Carrot: 2 </li>
-                        <li>Tomato: 1 </li>
+                        <li>Carrot: 2</li>
+                        <li>Tomato: 1</li>
                         <li>Total: <span id="price">$6</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div id="wallet" class="cotainer">
+            <div id="wallet">
+                <h1 class="row">
+                    Please select the amount you need to pay</h1>
+
                 <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3">Please select the amount you need to pay</div>
+                    <img alt="100" src="images/1dollar.jpg" class="col-lg-5" />
+                    <img alt="25" src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
+                    <img alt="10" src="images/dime.png" class="col-lg-2" />
+                    <img alt="1" src="images/penny.png" class="col-lg-2" />
                 </div>
                 <div class="row">
-                    <img src="images/1dollar.jpg" class="col-lg-5" />
-                    <img src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
-                    <img src="images/dime.png" class="col-lg-2" />
-                    <img src="images/penny.png" class="col-lg-2" />
+                    <img alt="100" src="images/1dollar.jpg" class="col-lg-5" />
+                    <img alt="25" src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
+                    <img alt="5" src="images/nickle.jpg" class="col-lg-2" />
+                    <img alt="10" src="images/dime.png" class="col-lg-2" />
                 </div>
                 <div class="row">
-                    <img src="images/1dollar.jpg" class="col-lg-5" />
-                    <img src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
-                    <img src="images/nickle.jpg" class="col-lg-2" />
-                    <img src="images/dime.png" class="col-lg-2" />
+                    <img alt="100" src="images/1dollar.jpg" class="col-lg-5" />
+                    <img alt="25" src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
+                    <img alt="5" src="images/nickle.jpg" class="col-lg-2" />
                 </div>
                 <div class="row">
-                    <img src="images/1dollar.jpg" class="col-lg-5" />
-                    <img src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
-                    <img src="images/nickle.jpg" class="col-lg-2" />
+                    <img alt="5" src="images/5dollar.jpg" class="col-lg-5" />
+                    <img alt="25" src="images/quarter.png" / class="col-lg-2 col-lg-offset-1" />
+                    <img alt="1" src="images/penny.png" class="col-lg-2" />
                 </div>
                 <div class="row">
-                    <img src="images/5dollar.jpg" class="col-lg-5" />
-                    <img src="images/quarter.png" / class="col-lg-2 col-lg-offset-1" />
-                    <img src="images/penny.png" class="col-lg-2" />
-                </div>
-                <div class="row">
-                    <img src="images/tendollar.jpg" class="col-lg-5" />
+                    <img alt="1000" src="images/tendollar.jpg" class="col-lg-5" />
+                    <h1 class="col-lg-7">Paying $<span id="paying"></span></h1>
                 </div>
             </div>
         </div>
@@ -156,7 +155,7 @@
 
 
     <script src="js/bootstrap.min.js "></script>
-
+    <script src="js/checkout.js"></script>
 
 </body>
 

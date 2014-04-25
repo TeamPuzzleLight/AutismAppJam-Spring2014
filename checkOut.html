@@ -150,8 +150,8 @@
                 </div>
                 <div class="row">
 
-                    <img alt="5" src="images/5dollar.jpg" class="col-lg-5" />
-                    <img alt="25" src="images/quarter.png" / class="col-lg-2 col-lg-offset-1" />
+                    <img alt="500" src="images/5dollar.jpg" class="col-lg-5" />
+                    <img alt="25" src="images/quarter.png"  class="col-lg-2 col-lg-offset-1" />
                     <img alt="1" src="images/penny.png" class="col-lg-2" />
                 </div>
                 <div class="row">
@@ -167,7 +167,19 @@
 
         </div>
     </div>
-
+    <script>
+    $(function() {
+    paying = 0;
+    $('#wallet').on('click', 'div img', function() {
+        var a = 100;
+        paying += parseInt($(this).attr('alt'))/a;
+        document.getElementById("paying").innerHTML = paying.toFixed(2);
+        $(this).remove();
+    });
+});
+    
+    
+    </script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/checkout.js"></script>
 

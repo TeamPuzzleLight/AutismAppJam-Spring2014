@@ -41,8 +41,7 @@
             border: 3px solid white;
             border-radius: 5px;
         }
-        #box
-        {
+        #box {
             width: 1500px;
             height: 800px;
             background: white;
@@ -50,63 +49,61 @@
             border: 3px solid black;
             border-radius: 30px;
         }
-        #shoppinglist{
+        #shoppinglist {
             border: 3px solid black;
             list-style: none;
             padding: 24px;
             font-size: 36px;
             text-align: center;
-            background:white; 
-            border-radius:30px; 
+            background: white;
+            border-radius: 30px;
             margin-top: 50px;
             margin-left: 50px;
-            width:500px;
+            width: 500px;
             height: 500px;
             float: left;
-        
         }
-        #shoppinglist li:first-child{
+        #shoppinglist li:first-child {
             font-size: 50px;
             font-weight: bold;
         }
         #shoppinglist li {
             margin: 12px;
         }
-        #paid, #change
-        {
+        #paid,
+        #change {
             width: 700px;
             height: 80px;
             border: 3px solid black;
-            border-radius:30px;
+            border-radius: 30px;
             margin-left: 600px;
             margin-top: 50px;
             background: white;
         }
-        #total
-        {
+        #total {
             width: 700px;
             height: 80px;
             border: 3px solid black;
-            border-radius:30px;
+            border-radius: 30px;
             margin-left: 600px;
             margin-top: 150px;
             background: white;
         }
-        #price, #pay, #changes, #again
-        {
+        #price,
+        .pay,
+        .changes,
+        #again {
             font-size: 50px;
             font-family: "Dosis", "San Serif";
             text-align: center;
-            
         }
-        btn
-        {
+        btn {
             width: 300px;
             height: 100px;
             margin-left: 300px;
             margin-top: 120px;
         }
-     </style>
+    </style>
 </head>
 
 
@@ -146,18 +143,36 @@
             </li>
 
         </ul>
-    <div id="total">
-        <p id="price">Price: $6</p>
-    </div> 
-    <div id="paid">
-        <p id="pay">Insert Money: $6</p>
-    </div> 
-    <div id="change">
-        <p id="changes">Change from Cashier: $0</p>
-    </div> 
-    <btn class="btn btn-primary" type="button" id="again" onclick="location.replace('home.html')">Play Again</btn>
+        <div id="total">
+            <p id="price">Price: $6</p>
+        </div>
+        <div id="paid">
+            <p class='pay'>Insert Money: $<span class="pay"></span>
+            </p>
+        </div>
+        <div id="change">
+            <p class="changes">Change from Cashier: $<span class="changes"></span>
+            </p>
+        </div>
+        <btn class="btn btn-primary" type="button" id="again" onclick="location.replace('home.html')">Play Again</btn>
     </div>
-    
+
+    <script>
+        var vars = [],
+            hash;
+        var q = document.URL.split('?')[1];
+        if (q != undefined) {
+            q = q.split('&');
+            for (var i = 0; i < q.length; i++) {
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+        }
+        var paying = vars['paying'];
+        $('.pay span').html(paying);
+        $('.changes span').html(paying - 6);
+    </script>
 
 </body>
 

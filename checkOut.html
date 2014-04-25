@@ -56,7 +56,6 @@
             background: white;
             border-radius: 30px;
             margin-bottom: 100px;
-            
         }
         #checkList {
             border: 3px solid black;
@@ -69,7 +68,8 @@
             margin-top: 50px;
             margin-left: 50px;
             width: 400px;
-            height: 500px;;
+            height: 500px;
+            ;
             float: left;
             font-family: "Dosis", "San Serif";
         }
@@ -95,12 +95,10 @@
             font-family: "Dosis", "San Serif";
             font-size: 50px;
         }
-        #wallet
-        {
+        #wallet {
             margin-top: 50px;
         }
-        #instruction
-        {
+        #instruction {
             border: 3px solid black;
             width: auto;
             height: auto;
@@ -111,8 +109,7 @@
             font-size: 50px;
             background-color: lightblue;
         }
-        #machine
-        {
+        #machine {
             margin-top: 50px;
             margin-left: 50px;
         }
@@ -142,7 +139,8 @@
                 <div class="col-lg-6" id="checkList">
 
                     <ul style="list-style-type: none;">
-                        <li><u>Check List</u></li>
+                        <li><u>Check List</u>
+                        </li>
                         <li>Apple: 2</li>
                         <li>Banana: 3</li>
                         <li>Pear: 1</li>
@@ -187,7 +185,7 @@
                 </div>
                 <div class="row">
                     <h1 style="padding:20px;" class="col-lg-7">Paying $<span id="paying">0.00</span></h1>
-                    <btn class="btn btn-info col-lg-4" type="button" id="readyToPay" onclick="location.replace('EndGame.html?paying=' + paying)">Pay</btn>
+                    <btn class="btn btn-info col-lg-4" type="button" id="readyToPay" onclick="location.replace('EndGame.html?paying=' + paying.toFixed(2))">Pay</btn>
                 </div>
             </div>
 
@@ -200,14 +198,13 @@
             $('#wallet').on('click', 'div img', function() {
                 var a = 100;
                 paying += parseInt($(this).attr('alt')) / a;
-//              paying = paying.toFixed(2);
+                //paying = paying.toFixed(2);
                 document.getElementById("paying").innerHTML = paying.toFixed(2);
                 $(this).remove();
             });
         });
     </script>
     <script src="js/bootstrap.min.js "></script>
-    <script src="js/checkout.js"></script>
 
 </body>
 

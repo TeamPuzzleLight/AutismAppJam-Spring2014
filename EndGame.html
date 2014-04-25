@@ -170,8 +170,8 @@
             }
         }
         var paying = vars['paying'];
-        $('.pay span').html(paying);
-        $('.changes span').html(paying - 6);
+        $('.pay span').html(parseFloat(paying).toFixed(2));
+        $('.changes span').html(parseFloat(paying - 6).toFixed(2));
     </script>
 
 </body>

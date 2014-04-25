@@ -8,6 +8,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <style>
+        #backgroundBox
+        {
+            margin-top: 24px;
+            border: solid;
+            border-color: black;
+            width: 1500px;
+            height: auto;
+            border-radius: 30px;
+            background: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
         #menu {
             text-decoration: none;
             list-style: none;
@@ -44,6 +56,29 @@
         .container {
             border: 2px solid white;
         }
+        #checkList{
+            border: 3px solid black;
+            list-style: none;
+            padding: 24px;
+            font-size: 36px;
+            text-align: center;
+            background:white; 
+            border-radius:30px; 
+            margin-top: 50px;
+            margin-left: 50px;
+            width:500px;
+            height: 500px;
+            float: left;
+            font-family: "Dosis", "San Serif";
+        }
+        #checkList li:first-child{
+            font-size: 50px;
+            font-weight: bold;
+            font-family: "Dosis", "San Serif";
+        }
+        #checkList li {
+        margin: 10px;
+    }
     </style>
 
 
@@ -65,18 +100,19 @@
             </li>
 
         </ul>
-        <div class="container">
+        <div id="backgroundBox" class="container">
             <div class="row">
                 <img class="col-lg-6" id="machine" src="images/self%20checkout.png">
-                <div class="col-lg-6">
-                    <span>Check List</span>
-                    <ul>
-                        <li>Apple:</li>
-                        <li>Banana:</li>
-                        <li>Broccoli:</li>
-                        <li>Carrot:</li>
-                        <li>Tomato:</li>
-                        <li>Total: <span id="price">1</span>
+                <div class="col-lg-6" id="checkList">
+                    
+                    <ul style="list-style-type: none;">
+                        <li>Check List</li>
+                        <li>Apple: 2</li>
+                        <li>Banana: 3 </li>
+                        <li>Broccoli: 1</li>
+                        <li>Carrot: 2 </li>
+                        <li>Tomato: 1 </li>
+                        <li>Total: <span id="price">$6</span>
                         </li>
                     </ul>
                 </div>

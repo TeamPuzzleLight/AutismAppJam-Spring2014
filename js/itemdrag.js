@@ -5,7 +5,7 @@ $(function() {
             if (currSpotCount !== 7) {
                 return "invalid"
             } else {
-                document.getElementById("message").innerHTML = "Your Basket is Full";
+                document.getElementById("message").innerHTML = "Your Basket is full.";
                 return "invalid"
             }
         }
@@ -24,7 +24,7 @@ $(function() {
             if (count < 6) {
                 return true;
             } else {
-                $("#message").html("Your basket is full");
+                $("#message").html("Your Basket is full.");
                 return false;
             }
         }

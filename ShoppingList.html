@@ -2,20 +2,19 @@
     * {
         font-family: "Comic Sans Ms", "Arial"
     }
-    #shoppinglist{
+    #shoppinglist {
         border: 3px, solid, black;
         list-style: none;
         padding: 24px;
         font-size: 36px;
         text-align: center;
-        background:white; 
-        border-radius:30px; 
+        background: white;
+        border-radius: 30px;
         margin-top: 100px;
         margin-left: 75px;
-        width:300px;
-        
+        width: 300px;
     }
-    #shoppinglist li:first-child{
+    #shoppinglist li:first-child {
         font-size: 50px;
         font-weight: bold;
     }
@@ -44,9 +43,9 @@
         height: 600px;
         border: 3px solid black;
         padding: 5px;
-        background:white; 
-        border-radius:30px; 
-        margin-right:100px;
+        background: white;
+        border-radius: 30px;
+        margin-right: 100px;
         margin-top: 100px;
     }
     #gamearea div {
@@ -62,12 +61,16 @@
         height: 100px;
         padding: 3px;
     }
+    #shelf {
+        width: 1200px;
+        height: 600px;
+    }
 </style>
 <div id="gamescreencontainer">
     <div id="shoppinglistcontainer">
         <style>
         </style>
-        
+
         <ul id="shoppinglist">
             <li>
                 Shopping List
@@ -89,10 +92,10 @@
             </li>
 
         </ul>
-        
+
     </div>
     <div id="gamearea">
-        <img src="images/fullshelf.png" />
+        <img id="shelf" src="images/fullshelf.png" />
         <div style="left:158px;top:40px;width:130px;height:120px" id="applediv"></div>
         <div style="left:350px;top:22px;width:165px;height:156px" id="bananadiv"></div>
         <div style="left:584px;top:23px;width:178px;height:158px" id="broccolidiv"></div>

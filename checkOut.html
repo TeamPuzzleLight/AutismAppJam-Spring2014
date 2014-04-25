@@ -78,7 +78,20 @@
         }
         #checkList li {
         margin: 10px;
-    }
+        }
+        btn
+        {
+            width:200px;
+            height: 100px;
+            border: 3px solid black;
+            text-align: center;
+            
+        }
+        #readyToPay
+        {
+            font-family: "Dosis", "San Serif";
+            font-size: 50px;
+        }
     </style>
 
 
@@ -140,20 +153,18 @@
                 </div>
                 <div class="row">
                     <img src="images/5dollar.jpg" class="col-lg-5" />
-                    <img src="images/quarter.png" / class="col-lg-2 col-lg-offset-1" />
+                    <img src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
                     <img src="images/penny.png" class="col-lg-2" />
                 </div>
                 <div class="row">
                     <img src="images/tendollar.jpg" class="col-lg-5" />
                 </div>
+                
+                
             </div>
+            <btn class="btn btn-info" type="button" id="readyToPay" onclick="location.replace('EndGame.html')">Pay</btn>
         </div>
     </div>
-
-
-    </div>
-
-
 
     <script src="js/bootstrap.min.js "></script>
 

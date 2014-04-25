@@ -72,10 +72,27 @@
             font-family: "Dosis", "San Serif";
         }
         #checkList li {
+<<<<<<< HEAD
             margin: 10px;
         }
         h1 {
             text-align: center;
+=======
+        margin: 10px;
+        }
+        btn
+        {
+            width:200px;
+            height: 100px;
+            border: 3px solid black;
+            text-align: center;
+            
+        }
+        #readyToPay
+        {
+            font-family: "Dosis", "San Serif";
+            font-size: 50px;
+>>>>>>> e954e3fa4062f6a3457da5d16342f78c308ca343
         }
     </style>
 
@@ -106,10 +123,17 @@
                     <ul style="list-style-type: none;">
                         <li>Check List</li>
                         <li>Apple: 2</li>
+<<<<<<< HEAD
                         <li>Banana: 3</li>
                         <li>Broccoli: 1</li>
                         <li>Carrot: 2</li>
                         <li>Tomato: 1</li>
+=======
+                        <li>Banana: 3 </li>
+                        <li>Pear: 1</li>
+                        <li>Tomato: 2 </li>
+                        <li>Carrot: 1 </li>
+>>>>>>> e954e3fa4062f6a3457da5d16342f78c308ca343
                         <li>Total: <span id="price">$6</span>
                         </li>
                     </ul>
@@ -137,22 +161,26 @@
                     <img alt="5" src="images/nickle.jpg" class="col-lg-2" />
                 </div>
                 <div class="row">
+<<<<<<< HEAD
                     <img alt="5" src="images/5dollar.jpg" class="col-lg-5" />
                     <img alt="25" src="images/quarter.png" / class="col-lg-2 col-lg-offset-1" />
                     <img alt="1" src="images/penny.png" class="col-lg-2" />
+=======
+                    <img src="images/5dollar.jpg" class="col-lg-5" />
+                    <img src="images/quarter.png" class="col-lg-2 col-lg-offset-1" />
+                    <img src="images/penny.png" class="col-lg-2" />
+>>>>>>> e954e3fa4062f6a3457da5d16342f78c308ca343
                 </div>
                 <div class="row">
                     <img alt="1000" src="images/tendollar.jpg" class="col-lg-5" />
                     <h1 class="col-lg-7">Paying $<span id="paying"></span></h1>
                 </div>
+                
+                
             </div>
+            <btn class="btn btn-info" type="button" id="readyToPay" onclick="location.replace('EndGame.html')">Pay</btn>
         </div>
     </div>
-
-
-    </div>
-
-
 
     <script src="js/bootstrap.min.js "></script>
     <script src="js/checkout.js"></script>
